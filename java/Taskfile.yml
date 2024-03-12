@@ -1,0 +1,18 @@
+version: '3'
+
+tasks:
+  default:
+    desc: List of tasks
+    cmds:
+      - task --list-all
+  build:
+    desc: Builds the Java app
+    cmds:
+      - javac -version
+      - cd src/main; javac com/cc/App.java
+  run:
+    desc: Runs the Java app
+    deps: [build]
+    cmds:
+      - cd src/main; java com.cc.App
+  

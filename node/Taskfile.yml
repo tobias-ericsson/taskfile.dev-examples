@@ -1,0 +1,15 @@
+version: '3'
+
+tasks:
+  default:
+    desc: List of tasks
+    cmds:
+      - task --list-all
+  build:
+    desc: Builds the Node app
+    cmds:
+      - node App.js
+  run:
+    desc: Runs the Node app
+    cmds:
+      - node App.js

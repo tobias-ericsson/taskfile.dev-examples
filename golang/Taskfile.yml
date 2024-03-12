@@ -1,0 +1,17 @@
+version: '3'
+
+tasks:
+  default:
+    desc: List of tasks
+    cmds:
+      - task --list-all
+
+  build:
+    desc: Builds the Golang app
+    cmds:
+      - go build app.go
+
+  run:
+    desc: Runs the Golang app
+    cmds:
+      - go run app.go

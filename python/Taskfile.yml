@@ -1,0 +1,15 @@
+version: '3'
+
+tasks:
+  default:
+    desc: List of tasks
+    cmds:
+      - task --list-all
+  build:
+    desc: Builds the Python app
+    cmds:
+      - python3 app.py
+  run:
+    desc: Runs the Python app
+    cmds:
+      - python3 app.py

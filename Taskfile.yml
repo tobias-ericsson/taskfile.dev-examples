@@ -1,0 +1,30 @@
+version: '3'
+
+includes:
+  golang: 
+    taskfile: ./golang/Taskfile.yml
+    dir: ./golang
+  java: 
+    taskfile: ./java/Taskfile.yml
+    dir: ./java
+  node:
+    taskfile: ./node/Taskfile.yml
+    dir: ./node
+  python: 
+    taskfile: ./python/Taskfile.yml
+    dir: ./python
+
+tasks:
+  default:
+    desc: List of all tasks
+    cmds:
+      - task --list-all
+  run:
+   desc: Run all tasks
+   cmds:
+     - task: golang:run
+     - task: java:run
+     - task: node:run
+     - task: python:run
+
+  
