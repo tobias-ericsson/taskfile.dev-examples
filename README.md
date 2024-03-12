@@ -33,7 +33,7 @@ For instance, imagine you have been tasked with updating all new and old applica
 
 You have access to the source code of the application but it is not the usual codebase you work on daily, instead the application is written in a programming language you barely know.
 
-Or just imagine that this is your first week as a new employee or that this is your hobbie-project your wrote five years ago and forgotten all about.
+Or just imagine that this is your first week as a new employee or that this is your hobbie-project in Erlang your wrote five years ago and have forgotten all about.
 
 How do you get up and running?
 
@@ -70,6 +70,39 @@ Can we wrap these specfic build tools in a starter package which will look and w
 So that an employee who changes team to work on something else would feel instantly at home. 
 
 And so that you yourself can pick up an old forgotten project and get up and running in notime? 
+
+#### Tools I have considered
+
+* Bash
+
+What is common for all and allready available? Well, Bash should be available on virtually all systems if you disregard Windows, and even on Windows with the use of WSL2 or Cygwin. A simple bash-script could work but bash-scripts can become ugly and hard to read/understand. And the writing style would differ from team to team. Not great.
+
+* Docker and docker-compose
+
+Docker is great in local development for running the stuff around your application, like the database or redis cache or other backend dependencies but you probably do not want to run the application under development in docker. It's a bit heavy for that. Again, not great.
+
+* Make and makefiles
+
+What is common for all and allready available? Well, Make should be available on most Linux systems and could be installed on Windows with the use of WSL2 or Cygwin.
+Make is a good choice but I resently found a newer and better alternative.
+
+### The winning tool - Task and Taskfiles
+
+
+
+### Loose ends
+
+How to make sure you use the right versions of the underlying language (Java, Python, Golang, etc) and build tool (Gradle, Maven, Yarn, etc)
+
+NIX to the resque?
+
+
+
+
+
+
+
+
 
 
 
