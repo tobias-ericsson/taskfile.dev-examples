@@ -19,5 +19,5 @@ tasks:
   clean: 
     desc: Deletes the Java class files
     cmds:
-     - rm **/*.class
+     - rm -rf **/*.class
   
