@@ -19,4 +19,4 @@ tasks:
   clean:
     desc: Deletes the Golang app
     cmds: 
-      - rm app
+      - rm -f app
