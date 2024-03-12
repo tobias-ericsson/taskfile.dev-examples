@@ -15,3 +15,8 @@ tasks:
     desc: Runs the Golang app
     cmds:
       - go run app.go
+  
+  clean:
+    desc: Deletes the Golang app
+    cmds: 
+      - rm app

@@ -15,4 +15,9 @@ tasks:
     deps: [build]
     cmds:
       - cd src/main; java com.cc.App
+
+  clean: 
+    desc: Deletes the Java class files
+    cmds:
+     - rm **/*.class
   
