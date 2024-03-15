@@ -86,7 +86,7 @@ Make is a good choice but I recently found a newer and better alternative.
 
 ### The winning tool - Task and Taskfiles
 
-Task [Task](https://taskfile.dev/) is a task runner / build tool written in Go that aims to be simpler and easier to use than, for example Make.
+[Task](https://taskfile.dev/) is a task runner / build tool written in Go that aims to be simpler and easier to use than, for example Make.
 
 Once installed, you just need to describe your build tasks using a simple YAML schema in a file called Taskfile.yml:
 
