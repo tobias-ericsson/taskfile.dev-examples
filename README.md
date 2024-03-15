@@ -86,7 +86,56 @@ Make is a good choice but I recently found a newer and better alternative.
 
 ### The winning tool - Task and Taskfiles
 
-TODO explain Taskfiles.
+Task [Task](https://taskfile.dev/) is a task runner / build tool written in Go that aims to be simpler and easier to use than, for example Make.
+
+Once installed, you just need to describe your build tasks using a simple YAML schema in a file called Taskfile.yml:
+
+```
+version: '3'
+
+tasks:
+  default:
+    desc: List of tasks
+    cmds:
+      - task --list-all
+
+  build:
+    desc: Builds the Golang app
+    cmds:
+      - go build app.go
+
+  run:
+    desc: Runs the Golang app
+    cmds:
+      - go run app.go
+  
+  clean:
+    desc: Deletes the Golang app
+    cmds: 
+      - rm -f app
+```
+
+And call for instance the build task by running `task build` from your terminal.
+
+This is somewhat cleaner and simpler than using Make, which would look something like this:
+
+```
+list: # List of tasks
+# list all targets, should be improved to not list also .PHONY
+	@grep '^[^#[:space:]].*:' Makefile
+
+.PHONY: build
+build: # Builds the Golang app
+	go build app.go
+
+.PHONY: run
+run: # Runs the Golang app
+	go run app.go
+
+.PHONY: clean  
+clean: # Deletes the Golang app
+	rm -f app
+```
 
 ### Loose ends
 
