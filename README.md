@@ -95,13 +95,17 @@ Make is a good choice but I recently found a newer and better alternative.
 
 Once installed, you just need to describe your build tasks using a simple YAML schema in a file called Taskfile.yml:
 
-https://github.com/tobias-ericsson/taskfile.dev-examples/blob/6985aceaa911ad43c8edef27694559f9887f4649/golang/Taskfile.yml#L1-L22
+Example with Golang:
+https://github.com/tobias-ericsson/taskfile.dev-examples/blob/a079ecf0f2584aa731f67366f0e9f4f1083887c9/golang/Taskfile.yml#L1-L22
+
+Example with Java:
+https://github.com/tobias-ericsson/taskfile.dev-examples/blob/a079ecf0f2584aa731f67366f0e9f4f1083887c9/java/Taskfile.yml#L1-L23
 
 And call for instance the build task by running `task build` from your terminal.
 
 This is somewhat cleaner and simpler than using Make, which would look something like this:
 
-https://github.com/tobias-ericsson/taskfile.dev-examples/blob/d4b849711ed8ee0ca78706323202dc94ddd45eb9/golang/makefile#L1-L15
+https://github.com/tobias-ericsson/taskfile.dev-examples/blob/a079ecf0f2584aa731f67366f0e9f4f1083887c9/golang/makefile#L1-L15
 
 Which you would run by `make build` from your terminal.
 
