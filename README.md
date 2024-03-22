@@ -103,28 +103,19 @@ This is somewhat cleaner and simpler than using Make, which would look something
 
 https://github.com/tobias-ericsson/taskfile.dev-examples/blob/d4b849711ed8ee0ca78706323202dc94ddd45eb9/golang/makefile#L1-L15
 
-Which you would run with by `make build` from your terminal.
+Which you would run by `make build` from your terminal.
 
 ### Possible improvments
 
-This is a solution to knowing which tools to use and which commands to execute (by inspecting the Taskfile.yml).
+This is a solution to quickly understand which tools to use and which commands to execute (by inspecting the Taskfile.yml).
 
-It is not a solution to installing and using the right versions 
+It is not a solution to easy install of the right versions of said tools. 
 
-not a solution to the problem of versioning and to have an easy way of 
+How can we easily install the right versions of the underlying language (Java, Python, Golang, etc) and build tool (Gradle, Maven, Yarn, etc)?
 
+[NIX](https://nix.dev/) to the rescue?
 
-For next blog post, follow up with...
-
-How to install and make sure you use the right versions of the underlying language (Java, Python, Golang, etc) and build tool (Gradle, Maven, Yarn, etc)
-
-NIX to the rescue?
-
-Proposal:
-
-All your, and your colleagues, projects/repositories should, in the root, have the following files:
-
-* A NIX file. Use NIX to install right versions of dependencies.
+I might soon propose that you use NIX to install the right versions of all tools and dependencies. Possibly all your, and your colleagues, projects/repositories should, in the root, alongside a good up-to-date README.md file have a NIX file to quickly install the right versions of your tools.
 
 
 
