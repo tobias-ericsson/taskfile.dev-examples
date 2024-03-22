@@ -1,24 +1,29 @@
-# Taskfile.dev-examples
-Taskfile.dev Examples
+# Task Examples
+
+[Task](https://taskfile.dev/) is a task runner / build tool that aims to be simpler and easier to use than, for example, GNU Make.
+
+This repository contains examples of how to use Task as the common homogeneous standard (wrapper) to build, test and run 
+your teams application locally regardless of which programming language, architecture or underlying build tool used.
+
+The goal is to make it as painless as possible for a new developer, or a developer who does not work with the code-base daily, to get up and running.
 
 ## TLDR
 
-Proposal:
+I propose that all your, and your colleagues, projects/repositories should, in the root, alongside a good up-to-date README.md file have a 
+Taskfile.yaml with tasks to quickly get started with local development.
 
-All your, and your colleagues, projects/repositories should, in the root, alongside a good up-to-date README.md file have:
+The Taskfile should contain the same or similar tasks regardless of project. 
 
-* A Taskfile with tasks to quickly get started with local development.
+No matter if you are building a web or mobile app, API or something else you will benefit of having a simple and standard way to build, test and run it locally. 
 
-Homogenize your projects by the use of Taskfiles.
+The examples in this repository are meant to get you started, not as a complete list of tasks your project needs.
 
-The Taskfile should contain the same or similar tasks regardless of project. No matter if you are building a web or mobile app, or API or something else you need a simple way of running it locally, and testing and deploying. 
-
- Tasks to consider should be:
+Tasks to consider should be:
 
 * build
-* run
 * test
 * integration-test
+* run
 * deploy-dev
 * deploy-prod
 * cleanup
@@ -90,54 +95,24 @@ Make is a good choice but I recently found a newer and better alternative.
 
 Once installed, you just need to describe your build tasks using a simple YAML schema in a file called Taskfile.yml:
 
-```
-version: '3'
-
-tasks:
-  default:
-    desc: List of tasks
-    cmds:
-      - task --list-all
-
-  build:
-    desc: Builds the Golang app
-    cmds:
-      - go build app.go
-
-  run:
-    desc: Runs the Golang app
-    cmds:
-      - go run app.go
-  
-  clean:
-    desc: Deletes the Golang app
-    cmds: 
-      - rm -f app
-```
+https://github.com/tobias-ericsson/taskfile.dev-examples/blob/6985aceaa911ad43c8edef27694559f9887f4649/golang/Taskfile.yml#L1-L22
 
 And call for instance the build task by running `task build` from your terminal.
 
 This is somewhat cleaner and simpler than using Make, which would look something like this:
 
-```
-list: # List of tasks
-# list all targets, should be improved to not list also .PHONY
-	@grep '^[^#[:space:]].*:' Makefile
+https://github.com/tobias-ericsson/taskfile.dev-examples/blob/d4b849711ed8ee0ca78706323202dc94ddd45eb9/golang/makefile#L1-L15
 
-.PHONY: build
-build: # Builds the Golang app
-	go build app.go
+Which you would run with by `make build` from your terminal.
 
-.PHONY: run
-run: # Runs the Golang app
-	go run app.go
+### Possible improvments
 
-.PHONY: clean  
-clean: # Deletes the Golang app
-	rm -f app
-```
+This is a solution to knowing which tools to use and which commands to execute (by inspecting the Taskfile.yml).
 
-### Loose ends
+It is not a solution to installing and using the right versions 
+
+not a solution to the problem of versioning and to have an easy way of 
+
 
 For next blog post, follow up with...
 
