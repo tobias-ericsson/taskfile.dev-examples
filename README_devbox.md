@@ -25,4 +25,10 @@ devbox search xxx
 ```
 https://search.nixos.org/
 
+## For more information
+
+[Nix for Everyone: Unleash Devbox for Simplified Development](https://www.youtube.com/watch?v=WiFLtcBvGMU&t=10s)
+
 [![Built with Devbox](https://jetpack.io/img/devbox/shield_moon.svg)](https://jetpack.io/devbox/docs/contributor-quickstart/)
+
+

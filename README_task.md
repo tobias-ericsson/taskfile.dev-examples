@@ -35,4 +35,11 @@ https://github.com/tobias-ericsson/taskfile.dev-examples/blob/a079ecf0f2584aa731
 
 Which you would run by `make build` from your terminal.
 
+## For more information
+
+[Uniform all your projects with Task](https://medium.com/crowd-collective/uniform-all-your-projects-with-task-a7f2a9ab4eca)
+
+[Say Goodbye to Makefile - Use Taskfile to Manage Tasks in CI/CD Pipelines and Locally](https://www.youtube.com/watch?v=Z7EnwBaJzCk&t=2s)
+
+
 
