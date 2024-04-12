@@ -7,7 +7,7 @@ your teams application locally regardless of which programming language, archite
 
 The goal is to make it as painless as possible for a new developer, or a developer who does not work with the code-base daily, to get up and running.
 
-README_task.md
+[README_task.md](README_task.md)
 
 # Devbox Examples
 
@@ -15,7 +15,9 @@ README_task.md
 
 This repository contains examples of how to use Devbox.
 
-/README_devbox.md
+The goal is to make it as painless as possible for a new developer, or a developer who does not work with the code-base daily, to easily install the right versions of the underlying language (Java, Python, Golang, etc) and build tools (Gradle, Maven, Yarn, etc).
+
+[README_devbox.md](README_devbox.md)
 
 [![Built with Devbox](https://jetpack.io/img/devbox/shield_moon.svg)](https://jetpack.io/devbox/docs/contributor-quickstart/)
 
